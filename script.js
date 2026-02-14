@@ -67,6 +67,19 @@ const btnMute = document.getElementById("btnMute");
 const confettiLayer = document.getElementById("confetti");
 const cardRoot = document.getElementById("cardRoot");
 
+const touchPad = document.querySelector(".touchPad");
+
+//new fix:
+function enableTouchControlsIfNeeded() 
+{
+  if ("ontouchstart" in window || navigator.maxTouchPoints > 0) 
+  {
+    touchPad.style.display = "grid";
+  }
+}
+
+enableTouchControlsIfNeeded();
+
 let running = false;
 let won = false;
 
@@ -546,4 +559,5 @@ function loop(now)
 }
 
 resetGame();
+
 requestAnimationFrame(loop);
