@@ -310,9 +310,6 @@ button:active { transform: translateY(1px); }
     justify-content: center;
     user-select: none;
 }
-@media (hover: none) and (pointer: coarse) {
-    .touchPad { display: grid; }
-}
 .dpad {
     display: grid;
     grid-template-columns: 52px 52px 52px;
@@ -394,3 +391,4 @@ button:active { transform: translateY(1px); }
     font-size: 11px;
   }
 }
+
