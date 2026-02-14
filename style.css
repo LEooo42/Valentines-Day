@@ -392,3 +392,13 @@ button:active { transform: translateY(1px); }
   }
 }
 
+@media (max-width: 900px) {
+  .touchPad { 
+    display: grid !important; 
+  }
+
+  .kbd {
+    display: none !important;
+  }
+}
+
