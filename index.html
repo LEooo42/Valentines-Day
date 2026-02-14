@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Heart Collector 💘</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" href="./mail.png" type="image/png">
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="card" id="cardRoot">
+      <div class="topbar">
+        <div class="brand">
+          <div class="logo">💘</div>
+          <div>
+            <h1>Heart Collector</h1>
+            <p id="subtitle">Collect hearts. Unlock reasons. Get the final surprise.</p>
+          </div>
+        </div>
+
+        <div class="hud">
+          <div class="pill">
+            <span>Hearts</span>
+            <strong id="heartCount">0</strong>
+            <span class="muted">/</span>
+            <strong id="heartTotal">8</strong>
+          </div>
+
+          <div class="pill" style="gap:10px;">
+            <span>Progress</span>
+            <span class="bar" aria-label="progress bar"><i id="barFill"></i></span>
+          </div>
+
+          <div class="pill">
+            <span class="kbd"><span>W</span><span>A</span><span>S</span><span>D</span></span>
+            <span class="muted">or</span>
+            <span class="kbd"><span>↑</span><span>←</span><span>↓</span><span>→</span></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="gamePane">
+          <canvas id="game" width="960" height="540" aria-label="Heart Collector Game"></canvas>
+
+          <div class="touchPad">
+            <div class="dpad" aria-label="touch dpad">
+              <button class="empty"></button>
+              <button data-dir="up">↑</button>
+              <button class="empty"></button>
+
+              <button data-dir="left">←</button>
+              <button class="empty"></button>
+              <button data-dir="right">→</button>
+
+              <button class="empty"></button>
+              <button data-dir="down">↓</button>
+              <button class="empty"></button>
+            </div>
+          </div>
+
+          <div class="footerNote">Tip: collect all hearts to reveal the final message 💗</div>
+
+          <div class="modal" id="modal">
+            <div class="modalCard">
+              <h3 id="modalTitle">💗 You found a heart!</h3>
+              <p id="modalBody"></p>
+              <div class="modalActions">
+                <button class="secondary" id="btnClose">Continue</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="confetti" id="confetti"></div>
+        </div>
+
+        <div class="rightPane">
+          <div class="panel">
+            <h2>So what do I do?</h2>
+            <p>
+              Move around, collect the hearts, and read what each one unlocks!
+              After the last heart, you'll get a final screen and confetti! Yay! ✨
+            </p>
+            <div class="controls">
+              <button id="btnStart">Start / Restart</button>
+              <button class="secondary" id="btnMute">Sound: On</button>
+            </div>
+          </div>
+
+          <div class="panel">
+            <h2>Why do I love you? 🥰</h2>
+            <div class="list" id="reasonsList">
+              <p class="muted">Collect a heart to reveal the first reason ✨</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
